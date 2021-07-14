@@ -7,6 +7,7 @@ module.exports = {
     index: './src/index.js',
     print: './src/hello.js',
   },
+  devtool: 'inline-source-map'
   plugins: [
     new HtmlWebpackPlugin({
       title: 'Restaurant Page',
@@ -15,6 +16,7 @@ module.exports = {
   output: {
     filename: '[name].bundle.js',
     path: path.resolve(__dirname, 'dist'),
+    clean: true
   },
   module: {
     rules: [
