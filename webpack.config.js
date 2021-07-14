@@ -7,7 +7,10 @@ module.exports = {
     index: './src/index.js',
     print: './src/hello.js',
   },
-  devtool: 'inline-source-map'
+  devtool: 'inline-source-map',
+  devServer: {
+    contentBase: './dist',
+  },
   plugins: [
     new HtmlWebpackPlugin({
       title: 'Restaurant Page',
