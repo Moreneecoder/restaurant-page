@@ -6,6 +6,7 @@ import navComponent from './nav';
 import homeComponent from './home';
 import menuComponent from './menu';
 import contactComponent from './contact';
+import footerComponent from './footer';
 
 const removeChildWithinParent = (parent, child) => {
   const childNode = document.getElementById(child);
@@ -26,6 +27,8 @@ document.addEventListener('DOMContentLoaded', () => {
 
   const mainContent = document.getElementById('content');
   mainContent.appendChild(homeComponent());
+
+  document.body.appendChild(footerComponent())
 
   document.addEventListener('click', (e) => {
     if (e.target && e.target.id === 'menu') {

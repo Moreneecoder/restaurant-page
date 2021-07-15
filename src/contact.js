@@ -1,7 +1,7 @@
 export default function contactComponent() {
   const contactWrapper = document.createElement('div');
   contactWrapper.id = 'contact-wrapper';
-  contactWrapper.classList.add('pt-5');
+  contactWrapper.classList.add('py-5');
 
   const contactCard = document.createElement('div');
   contactCard.classList.add('card', 'col-md-6', 'mx-auto', 'text-center', 'py-3');
