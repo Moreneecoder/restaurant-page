@@ -13,6 +13,13 @@ const removeChildWithinParent = (parent, child) => {
     }
 }
 
+const addTabContent = (parent, child, component) => {
+    const childNode = document.getElementById(child)
+    if (! parent.contains(childNode)){
+        parent.appendChild(component);
+    }
+}
+
 document.addEventListener('DOMContentLoaded', () => {
   document.body.appendChild(navComponent());
 
@@ -23,20 +30,19 @@ document.addEventListener('DOMContentLoaded', () => {
     if (e.target && e.target.id === 'menu') {
       removeChildWithinParent(mainContent, 'home-wrapper')
       removeChildWithinParent(mainContent, 'contact-wrapper')
-      mainContent.appendChild(menuComponent());
+      addTabContent(mainContent, 'menu-wrapper', menuComponent())
     }
 
     if (e.target && e.target.id === 'home') {
-    removeChildWithinParent(mainContent, 'menu-wrapper')
-    removeChildWithinParent(mainContent, 'contact-wrapper')
-      mainContent.appendChild(homeComponent());
+        removeChildWithinParent(mainContent, 'menu-wrapper')
+        removeChildWithinParent(mainContent, 'contact-wrapper')
+        addTabContent(mainContent, 'home-wrapper', homeComponent())
     }
 
     if (e.target && e.target.id === 'contact') {
         removeChildWithinParent(mainContent, 'menu-wrapper')
         removeChildWithinParent(mainContent, 'home-wrapper')
-
-        mainContent.appendChild(contactComponent());
+        addTabContent(mainContent, 'contact-wrapper', contactComponent())
       }
   });
 });

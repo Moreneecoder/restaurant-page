@@ -1,11 +1,10 @@
-/* body {
+.menu {
   background: url('./cup-cake.jpg');
   background-color: #ccc;
-  height: 700px;
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
-} */
+}
 
 .restaurant-name {
   font-size: 120px;
