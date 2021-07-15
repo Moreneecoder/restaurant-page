@@ -4,6 +4,14 @@ import 'bootstrap/js/dist/dropdown';
 import navComponent from './nav';
 import homeComponent from './home';
 import menuComponent from './menu';
+import contactComponent from './contact';
+
+const removeChildWithinParent = (parent, child) => {
+    const childNode = document.getElementById(child)
+    if (parent.contains(childNode)){
+        parent.removeChild(childNode)
+    }
+}
 
 document.addEventListener('DOMContentLoaded', () => {
   document.body.appendChild(navComponent());
@@ -13,20 +21,22 @@ document.addEventListener('DOMContentLoaded', () => {
 
   document.addEventListener('click', (e) => {
     if (e.target && e.target.id === 'menu') {
-      const homeContent = document.getElementById('home-wrapper');
-      mainContent.removeChild(homeContent);
+      removeChildWithinParent(mainContent, 'home-wrapper')
+      removeChildWithinParent(mainContent, 'contact-wrapper')
       mainContent.appendChild(menuComponent());
     }
 
     if (e.target && e.target.id === 'home') {
-      const menuContent = document.getElementById('menu-wrapper');
-      mainContent.removeChild(menuContent);
+    removeChildWithinParent(mainContent, 'menu-wrapper')
+    removeChildWithinParent(mainContent, 'contact-wrapper')
       mainContent.appendChild(homeComponent());
     }
-  });
 
-  // menu.addEventListener('click', () => {
-  //     document.body.removeChild(content);
-  //     document.body.appendChild(menuComponent());
-  // })
+    if (e.target && e.target.id === 'contact') {
+        removeChildWithinParent(mainContent, 'menu-wrapper')
+        removeChildWithinParent(mainContent, 'home-wrapper')
+
+        mainContent.appendChild(contactComponent());
+      }
+  });
 });
