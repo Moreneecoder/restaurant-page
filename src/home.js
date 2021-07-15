@@ -1,39 +1,11 @@
 import bannerImage from './tea-party.png'
-
-const navbarHtml = `<div class="container-fluid">
-<a class="navbar-brand" href="#">Navbar</a>
-<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-  <span class="navbar-toggler-icon"></span>
-</button>
-<div class="collapse navbar-collapse" id="navbarSupportedContent">
-  <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-    <li class="nav-item">
-      <a class="nav-link active" aria-current="page" href="#">Home</a>
-    </li>
-    <li class="nav-item">
-      <a class="nav-link" href="#">Menu</a>
-    </li>
-    <li class="nav-item">
-      <a class="nav-link" href="#">Contact</a>
-    </li>
-  </ul>
-</div>
-</div>`;
+import navComponent from './nav'
 
 export default function homeComponent() {
-  const mainContent = document.createElement('div');
-  mainContent.classList.add('contents');
+  const homeWrapper = document.createElement('div');
+  homeWrapper.id = 'home-wrapper';
 
-  const navBar = document.createElement('nav');
-  navBar.classList.add(...['navbar', 'navbar-expand-lg', 'navbar-light', 'bg-light']);
-
-  navBar.innerHTML = navbarHtml;
-
-  mainContent.appendChild(navBar);
-
-  const mainTag = document.createElement('main')
-  mainTag.classList.add('container');
-  mainContent.appendChild(mainTag)
+  console.log(homeWrapper);
 
   const banner = document.createElement('div')
   banner.classList.add('row', 'banner')
@@ -82,8 +54,8 @@ export default function homeComponent() {
   banner.appendChild(restaurantNameBar)
   banner.appendChild(imageBar)
 
-  mainContent.appendChild(banner)
-  mainContent.appendChild(restaurantHypeBar)
+  homeWrapper.appendChild(banner)
+  homeWrapper.appendChild(restaurantHypeBar)
 
-  return mainContent;
+  return homeWrapper;
 }
