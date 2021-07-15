@@ -5,5 +5,12 @@
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
-  opacity: 0.1;
 } */
+
+.restaurant-name {
+  font-size: 120px;
+}
+
+.banner {
+  background-color: #ed8a09;
+}
