@@ -28,7 +28,7 @@ document.addEventListener('DOMContentLoaded', () => {
   const mainContent = document.getElementById('content');
   mainContent.appendChild(homeComponent());
 
-  document.body.appendChild(footerComponent())
+  document.body.appendChild(footerComponent());
 
   document.addEventListener('click', (e) => {
     if (e.target && e.target.id === 'menu') {
