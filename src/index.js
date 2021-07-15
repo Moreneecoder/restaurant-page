@@ -7,18 +7,18 @@ import menuComponent from './menu';
 import contactComponent from './contact';
 
 const removeChildWithinParent = (parent, child) => {
-    const childNode = document.getElementById(child)
-    if (parent.contains(childNode)){
-        parent.removeChild(childNode)
-    }
-}
+  const childNode = document.getElementById(child);
+  if (parent.contains(childNode)) {
+    parent.removeChild(childNode);
+  }
+};
 
 const addTabContent = (parent, child, component) => {
-    const childNode = document.getElementById(child)
-    if (! parent.contains(childNode)){
-        parent.appendChild(component);
-    }
-}
+  const childNode = document.getElementById(child);
+  if (!parent.contains(childNode)) {
+    parent.appendChild(component);
+  }
+};
 
 document.addEventListener('DOMContentLoaded', () => {
   document.body.appendChild(navComponent());
@@ -28,21 +28,21 @@ document.addEventListener('DOMContentLoaded', () => {
 
   document.addEventListener('click', (e) => {
     if (e.target && e.target.id === 'menu') {
-      removeChildWithinParent(mainContent, 'home-wrapper')
-      removeChildWithinParent(mainContent, 'contact-wrapper')
-      addTabContent(mainContent, 'menu-wrapper', menuComponent())
+      removeChildWithinParent(mainContent, 'home-wrapper');
+      removeChildWithinParent(mainContent, 'contact-wrapper');
+      addTabContent(mainContent, 'menu-wrapper', menuComponent());
     }
 
     if (e.target && e.target.id === 'home') {
-        removeChildWithinParent(mainContent, 'menu-wrapper')
-        removeChildWithinParent(mainContent, 'contact-wrapper')
-        addTabContent(mainContent, 'home-wrapper', homeComponent())
+      removeChildWithinParent(mainContent, 'menu-wrapper');
+      removeChildWithinParent(mainContent, 'contact-wrapper');
+      addTabContent(mainContent, 'home-wrapper', homeComponent());
     }
 
     if (e.target && e.target.id === 'contact') {
-        removeChildWithinParent(mainContent, 'menu-wrapper')
-        removeChildWithinParent(mainContent, 'home-wrapper')
-        addTabContent(mainContent, 'contact-wrapper', contactComponent())
-      }
+      removeChildWithinParent(mainContent, 'menu-wrapper');
+      removeChildWithinParent(mainContent, 'home-wrapper');
+      addTabContent(mainContent, 'contact-wrapper', contactComponent());
+    }
   });
 });
