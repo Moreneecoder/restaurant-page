@@ -17,3 +17,11 @@
 .theme-bg {
   background-color: #ed8a09;
 }
+
+.meal-col-flex {
+  display: flex;
+}
+
+.meal-col-flex div {
+  flex-basis: 75%;
+}
