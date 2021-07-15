@@ -5,31 +5,28 @@ import navComponent from './nav';
 import homeComponent from './home';
 import menuComponent from './menu';
 
+document.addEventListener('DOMContentLoaded', () => {
+  document.body.appendChild(navComponent());
 
-document.addEventListener('DOMContentLoaded', function () {
-    document.body.appendChild(navComponent());
+  const mainContent = document.getElementById('content');
+  mainContent.appendChild(homeComponent());
 
-    const mainContent = document.getElementById('content');
-    mainContent.appendChild(homeComponent())
+  document.addEventListener('click', (e) => {
+    if (e.target && e.target.id === 'menu') {
+      const homeContent = document.getElementById('home-wrapper');
+      mainContent.removeChild(homeContent);
+      mainContent.appendChild(menuComponent());
+    }
 
-    document.addEventListener('click', (e) => {
+    if (e.target && e.target.id === 'home') {
+      const menuContent = document.getElementById('menu-wrapper');
+      mainContent.removeChild(menuContent);
+      mainContent.appendChild(homeComponent());
+    }
+  });
 
-        if(e.target && e.target.id == 'menu'){
-            const homeContent = document.getElementById('home-wrapper')
-            mainContent.removeChild(homeContent)
-            mainContent.appendChild(menuComponent());
-       }
-
-       if(e.target && e.target.id == 'home'){
-        const menuContent = document.getElementById('menu-wrapper')
-        console.log(menuContent);
-        mainContent.removeChild(menuContent)
-        mainContent.appendChild(homeComponent());
-       }
-    })
-
-    // menu.addEventListener('click', () => {
-    //     document.body.removeChild(content);
-    //     document.body.appendChild(menuComponent());
-    // })
-} );
+  // menu.addEventListener('click', () => {
+  //     document.body.removeChild(content);
+  //     document.body.appendChild(menuComponent());
+  // })
+});
