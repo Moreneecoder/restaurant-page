@@ -1,0 +1,27 @@
+.menu {
+  background: url('./cup-cake.jpg');
+  background-color: #ccc;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.restaurant-name {
+  font-size: 120px;
+}
+
+.banner {
+  background-color: #ed8a09;
+}
+
+.theme-bg {
+  background-color: #ed8a09;
+}
+
+.meal-col-flex {
+  display: flex;
+}
+
+.meal-col-flex div {
+  flex-basis: 75%;
+}
