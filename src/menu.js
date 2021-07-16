@@ -48,7 +48,7 @@ const loadMealsTo = (menuRow) => {
   return menuRow;
 };
 
-export default function menuComponent() {
+const menuComponent = () => {
   const menuWrapper = document.createElement('div');
   menuWrapper.id = 'menu-wrapper';
   menuWrapper.classList.add('py-5', 'menu');
@@ -77,3 +77,5 @@ export default function menuComponent() {
 
   return menuWrapper;
 }
+
+export default menuComponent

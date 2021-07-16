@@ -1,4 +1,4 @@
-export default function contactComponent() {
+const contactComponent = () => {
   const contactWrapper = document.createElement('div');
   contactWrapper.id = 'contact-wrapper';
   contactWrapper.classList.add('py-5');
@@ -23,3 +23,5 @@ export default function contactComponent() {
 
   return contactWrapper;
 }
+
+export default contactComponent

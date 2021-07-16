@@ -1,6 +1,6 @@
 import bannerImage from './tea-party.png';
 
-export default function homeComponent() {
+const homeComponent = () => {
   const homeWrapper = document.createElement('div');
   homeWrapper.id = 'home-wrapper';
 
@@ -55,3 +55,5 @@ export default function homeComponent() {
 
   return homeWrapper;
 }
+
+export default homeComponent

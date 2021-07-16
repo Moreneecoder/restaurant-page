@@ -1,4 +1,4 @@
-export default function footerComponent() {
+const footerComponent = () => {
   const footer = document.createElement('footer');
   footer.id = 'footer';
   footer.classList.add('container-fluid', 'theme-bg', 'text-white', 'py-3', 'fixed-bottom');
@@ -12,3 +12,5 @@ export default function footerComponent() {
 
   return footer;
 }
+
+export default footerComponent
