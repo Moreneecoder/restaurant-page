@@ -54,6 +54,6 @@ const homeComponent = () => {
   homeWrapper.appendChild(restaurantHypeBar);
 
   return homeWrapper;
-}
+};
 
-export default homeComponent
+export default homeComponent;

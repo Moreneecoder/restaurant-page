@@ -22,6 +22,6 @@ const contactComponent = () => {
   contactWrapper.appendChild(contactCard);
 
   return contactWrapper;
-}
+};
 
-export default contactComponent
+export default contactComponent;

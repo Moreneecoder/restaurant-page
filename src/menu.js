@@ -76,6 +76,6 @@ const menuComponent = () => {
   menuWrapper.appendChild(menuCard);
 
   return menuWrapper;
-}
+};
 
-export default menuComponent
+export default menuComponent;

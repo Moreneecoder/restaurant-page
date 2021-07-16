@@ -24,7 +24,7 @@ const navComponent = () => {
 
   navBar.innerHTML = navbarHtml;
 
-  return navBar
-}
+  return navBar;
+};
 
-export default navComponent
+export default navComponent;

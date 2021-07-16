@@ -11,6 +11,6 @@ const footerComponent = () => {
   footer.appendChild(authorLink);
 
   return footer;
-}
+};
 
-export default footerComponent
+export default footerComponent;
