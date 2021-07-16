@@ -1,4 +1,5 @@
 import bannerImage from '../images/tea-party.png';
+import hypeImage from '../images/burger-stand.png';
 
 const homeComponent = () => {
   const homeWrapper = document.createElement('div');
@@ -32,16 +33,37 @@ const homeComponent = () => {
   const restaurantHypeBar = document.createElement('div');
   restaurantHypeBar.classList.add('text-center', 'row', 'pt-3');
 
+  const hypeTextHeadline = document.createElement('h3')
+  hypeTextHeadline.classList.add('text-decoration-underline', 'fw-bolder')
+  hypeTextHeadline.textContent = 'We Know Stuff'
+
+  const hypeImageBar = document.createElement('div')
+  hypeImageBar.classList.add('offset-md-1', 'col-md-2')
+
+  const hypeImg = new Image()
+  hypeImg.classList.add('img-fluid')
+  hypeImg.src = hypeImage
+
+  hypeImageBar.appendChild(hypeImg)
+
   const hypeTextBar = document.createElement('div');
-  hypeTextBar.classList.add('offset-2', 'col-8', 'text-muted');
+  hypeTextBar.classList.add('col-12', 'col-md-7', 'fw-bolder');
 
   const hypeText = document.createElement('p');
-  hypeText.textContent = `Lorem ipsum dolor sit amet consectetur adipisicing elit. Veniam ratione soluta veritatis, 
-  maxime provident numquam recusandae neque rerum quae tempora. Laudantium veniam soluta temporibus, similique 
-  quibusdam harum labore sunt expedita autem provident, eaque a ut animi, magni aliquid architecto quae ea? Laboriosam
-   voluptas quam est eaque nulla repellat aliquid sit.`;
+  hypeText.classList.add('text-muted')
+  hypeText.innerHTML = `At <span class="theme-text">Chop 'N' Go</span>, we are beyond just a restaurant! 
+  We are about <span class="theme-text">food art</span>. With over <span class="theme-text">120 chefs</span> 
+  from across Africa, we <span class="theme-text">continously experiment</span> with and create <span 
+  class="theme-text">new recipes</span> that create <span class="theme-text">tasteful experiences</span> 
+  for our customers. So whether you're a <span class="theme-text">seasoned foodie</span> looking for 
+  <span class="theme-text">new adventures</span> or a regular who just want to <span class="theme-text">satisfy
+  their hunger</span>, we are the haven that provides <span class="theme-text">exactly what you need</span>.`;
+
 
   hypeTextBar.appendChild(hypeText);
+
+  restaurantHypeBar.appendChild(hypeTextHeadline);
+  restaurantHypeBar.appendChild(hypeImageBar);
   restaurantHypeBar.appendChild(hypeTextBar);
 
   restaurantNameBar.appendChild(restaurantName);
