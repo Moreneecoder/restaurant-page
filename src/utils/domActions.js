@@ -1,3 +1,30 @@
+const meals = [
+    {
+      type: 'African Dish',
+      name: 'Amala with Efo Riro and Assorted Meat',
+      description: 'Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Lorem Ipsum',
+      price: '2,500',
+    },
+    {
+      type: 'Beverage',
+      name: 'Inui Protein Shake',
+      description: 'Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Lorem Ipsum',
+      price: '1,400',
+    },
+    {
+      type: 'African Dish',
+      name: 'Pounded Yam with Egusi and Assorted Meat',
+      description: 'Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Lorem Ipsum',
+      price: '3,000',
+    },
+    {
+      type: 'Beverage',
+      name: 'Oreo Latte',
+      description: 'Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Lorem Ipsum',
+      price: '2,000',
+    },
+];
+
 const removeChildWithinParent = (parent, child) => {
     const childNode = document.getElementById(child);
     if (parent.contains(childNode)) {
@@ -13,33 +40,6 @@ const removeChildWithinParent = (parent, child) => {
   };
 
   const loadMealsTo = (menuRow) => {
-    const meals = [
-      {
-        type: 'African Dish',
-        name: 'Amala with Efo Riro and Assorted Meat',
-        description: 'Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Lorem Ipsum',
-        price: '2,500',
-      },
-      {
-        type: 'Beverage',
-        name: 'Inui Protein Shake',
-        description: 'Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Lorem Ipsum',
-        price: '1,400',
-      },
-      {
-        type: 'African Dish',
-        name: 'Pounded Yam with Egusi and Assorted Meat',
-        description: 'Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Lorem Ipsum',
-        price: '3,000',
-      },
-      {
-        type: 'Beverage',
-        name: 'Oreo Latte',
-        description: 'Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Lorem Ipsum',
-        price: '2,000',
-      },
-    ];
-  
     meals.forEach((meal) => {
       const mealCol = document.createElement('div');
       mealCol.classList.add('meal', 'col-12', 'col-md-6', 'mb-5');
