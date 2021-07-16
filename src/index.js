@@ -20,20 +20,17 @@ document.addEventListener('DOMContentLoaded', () => {
 
   document.addEventListener('click', (e) => {
     if (e.target && e.target.id === 'menu') {
-      domActions.removeChildWithinParent(mainContent, 'home-wrapper');
-      domActions.removeChildWithinParent(mainContent, 'contact-wrapper');
+      domActions.removeChildWithinParent(mainContent, ['home-wrapper', 'contact-wrapper']);
       domActions.addTabContent(mainContent, 'menu-wrapper', menuComponent());
     }
 
     if (e.target && e.target.id === 'home') {
-      domActions.removeChildWithinParent(mainContent, 'menu-wrapper');
-      domActions.removeChildWithinParent(mainContent, 'contact-wrapper');
+      domActions.removeChildWithinParent(mainContent, ['menu-wrapper', 'contact-wrapper']);
       domActions.addTabContent(mainContent, 'home-wrapper', homeComponent());
     }
 
     if (e.target && e.target.id === 'contact') {
-      domActions.removeChildWithinParent(mainContent, 'menu-wrapper');
-      domActions.removeChildWithinParent(mainContent, 'home-wrapper');
+      domActions.removeChildWithinParent(mainContent, ['menu-wrapper', 'home-wrapper']);
       domActions.addTabContent(mainContent, 'contact-wrapper', contactComponent());
     }
   });
