@@ -7,7 +7,7 @@ import homeComponent from './components/home';
 import menuComponent from './components/menu';
 import contactComponent from './components/contact';
 import footerComponent from './components/footer';
-import * as domActions from './utils/domActions'
+import * as domActions from './utils/domActions';
 
 document.addEventListener('DOMContentLoaded', () => {
   document.body.prepend(navComponent());

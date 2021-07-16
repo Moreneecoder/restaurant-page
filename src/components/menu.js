@@ -1,4 +1,4 @@
-import {loadMealsTo} from '../utils/domActions'
+import { loadMealsTo } from '../utils/domActions';
 
 const menuComponent = () => {
   const menuWrapper = document.createElement('div');
