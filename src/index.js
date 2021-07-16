@@ -2,11 +2,11 @@ import './style.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import 'bootstrap/js/dist/dropdown';
 import 'bootstrap/js/dist/collapse';
-import navComponent from './nav';
-import homeComponent from './home';
-import menuComponent from './menu';
-import contactComponent from './contact';
-import footerComponent from './footer';
+import navComponent from './components/nav';
+import homeComponent from './components/home';
+import menuComponent from './components/menu';
+import contactComponent from './components/contact';
+import footerComponent from './components/footer';
 
 const removeChildWithinParent = (parent, child) => {
   const childNode = document.getElementById(child);
