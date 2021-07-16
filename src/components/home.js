@@ -1,4 +1,4 @@
-import bannerImage from '../tea-party.png';
+import bannerImage from '../images/tea-party.png';
 
 const homeComponent = () => {
   const homeWrapper = document.createElement('div');
