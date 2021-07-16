@@ -23,9 +23,10 @@ const addTabContent = (parent, child, component) => {
 };
 
 document.addEventListener('DOMContentLoaded', () => {
-  document.body.appendChild(navComponent());
+  document.body.prepend(navComponent());
 
   const mainContent = document.getElementById('content');
+  mainContent.classList.add('container-fluid', 'pb-5', 'pt-5');
   mainContent.appendChild(homeComponent());
 
   document.body.appendChild(footerComponent());

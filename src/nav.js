@@ -19,18 +19,12 @@ const navComponent = () => {
     </div>
     </div>`;
 
-  const mainContent = document.createElement('div');
-  mainContent.id = 'content';
-  mainContent.classList.add('container-fluid', 'pb-5', 'pt-5');
-
   const navBar = document.createElement('nav');
   navBar.classList.add(...['navbar', 'navbar-expand-lg', 'navbar-light', 'bg-light', 'fixed-top']);
 
   navBar.innerHTML = navbarHtml;
 
-  mainContent.appendChild(navBar);
-
-  return mainContent;
+  return navBar
 }
 
 export default navComponent
